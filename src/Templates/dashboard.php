@@ -3,7 +3,6 @@
 		session_start();
 	}
 ?>
-<script src="http://www.w3schools.com/lib/w3data.js"></script>
 
 <!DOCTYPE html>
 <html>
