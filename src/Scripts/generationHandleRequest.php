@@ -163,8 +163,10 @@ foreach ($values as $key => $value) {
 	$fields .= $value['name'].", ";
 	$insertValues .= "\"".$value['value']."\", ";
 }
-$fields .= "presentState";
-$insertValues .= "\"".$nextState."\"";
+$fields .= "presentState, ";
+$insertValues .= "\"".$nextState."\", \"";
+$fields .= "ownerState";
+$insertValues .= $stateName."\"";
 
 $sql = "INSERT INTO RequestHandlingMain (".$fields.") VALUES (".$insertValues.")";
 if ($conn->query($sql) === TRUE) {
